@@ -1,4 +1,3 @@
-// /src/screens/CalculatorScreen.js
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Navbar from '../components/navbar/navbar'; 
@@ -12,6 +11,24 @@ class CalculatorScreen extends Component {
       result: '0',
       expression: '',
     };
+  }
+
+  componentDidMount() {
+    console.log('CalculatorScreen has been mounted');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.expression !== this.state.expression) {
+      console.log('Expression updated:', this.state.expression);
+    }
+
+    if (prevState.result !== this.state.result) {
+      console.log('Result updated:', this.state.result);
+    }
+  }
+
+  componentWillUnmount() {
+    console.log('CalculatorScreen will be unmounted');
   }
 
   handleButtonPress = (label) => {

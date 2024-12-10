@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import CalculatorScreen from './src/tampilan/tampilan';
+import CalculatorScreen from './src/lifecycle/lifecycle';
 
 export default function App() {
   return (
